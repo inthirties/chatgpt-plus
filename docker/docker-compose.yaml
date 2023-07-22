@@ -1,10 +1,9 @@
 version: '3'
 services:
   # 后端 API 程序
-  chatgpt-plus-go:
-    #image: registry.cn-hangzhou.aliyuncs.com/geekmaster/chatgpt-plus-go:v3.0.4
-    image: chatgpt-plus-go:v3.0.4
-    #    image: chatgpt-plus-go:v3.0.2
+  chatgpt-plus-go:    
+    image: joinsunsoft/chatgpt-plus-go:v3.0.4
+    #    image: chatgpt-plus-go:v3.0.4
     container_name: chatgpt-plus-go
     restart: always
     environment:
@@ -17,10 +16,9 @@ services:
       - ./static:/var/www/app/static
 
   # 前端应用
-  chatgpt-vue:
-    #image: registry.cn-hangzhou.aliyuncs.com/geekmaster/chatgpt-plus-vue:v3.0.4
-    image: chatgpt-plus-vue:v3.0.4
-    #    image: chatgpt-plus-vue:v3.0.2
+  chatgpt-vue:    
+    image: joinsunsoft/chatgpt-plus-vue:v3.0.4
+    #    image: chatgpt-plus-vue:v3.0.4
     container_name: chatgpt-plus-vue
     restart: always
     ports:
