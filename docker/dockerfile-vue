@@ -1,10 +1,10 @@
 # 前端 Vue 项目构建
 FROM nginx:1.20.2
 
-MAINTAINER yangjian<yangjian102621@163.com>
+MAINTAINER inthirties<793875613@qq.com>
 
 WORKDIR /var/www/app
-COPY ./web/dist /var/www/app/dist
+COPY ./dist /var/www/app/dist
 
 EXPOSE 80
 EXPOSE 443
