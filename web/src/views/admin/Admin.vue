@@ -47,7 +47,7 @@
           <el-row class="nav-footer">
             <div class="source">
               <i class="iconfont icon-github"></i>
-              <el-link href="https://github.com/yangjian102621/chatgpt-plus" target="_blank">ChatGPT-Plus-V3</el-link>
+              <el-link href="https://github.com/inthirties/chatgpt-plus" target="_blank">ChatGPT-Plus-V3</el-link>
             </div>
 
             <div class="logout" @click="logout">

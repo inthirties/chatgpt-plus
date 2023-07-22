@@ -39,7 +39,7 @@
           <template #dropdown>
             <el-dropdown-menu>
 
-              <a href="https://github.com/yangjian102621/chatgpt-plus" target="_blank">
+              <a href="https://github.com/inthirties/chatgpt-plus" target="_blank">
                 <el-dropdown-item>
                   <i class="iconfont icon-github"></i>
                   <span>ChatGPT-Plus-V3</span>
@@ -84,7 +84,7 @@ import {httpGet} from "@/utils/http";
 import {ElMessage} from "element-plus";
 
 const message = ref(5);
-const username = ref('极客学长')
+const username = ref('inthirties')
 const avatar = ref('/images/user-info.jpg')
 const donateImg = ref('/images/wechat-pay.png')
 const showDialog = ref(false)
