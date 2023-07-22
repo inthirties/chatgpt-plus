@@ -1,8 +1,8 @@
 Listen = "0.0.0.0:5678"
 ProxyURL = "http://172.22.11.200:7777"
-MysqlDns = "root:12345678@tcp(172.28.173.76:3307)/chatgpt_plus?charset=utf8mb4&collation=utf8mb4_unicode_ci&parseTime=True&loc=Local"
+MysqlDns = "root:root123456@tcp(192.168.56.102:3306)/chatgpt_plus?charset=utf8mb4&collation=utf8mb4_unicode_ci&parseTime=True&loc=Local"
 StaticDir = "./static"
-StaticUrl = "http://localhost:8080/static"
+StaticUrl = "http://192.168.56.102:8080/static"
 
 [Session]
   Driver = "cookie"
