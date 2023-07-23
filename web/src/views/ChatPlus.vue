@@ -257,6 +257,8 @@ onMounted(() => {
       // 获取会话列表
       loadChats();
       // 创建新的会话
+	  
+	  
       newChat();
     }).catch((e) => {
       console.log(e)
@@ -419,11 +421,17 @@ const socket = ref(null);
 const activelyClose = ref(false); // 主动关闭
 const canSend = ref(true);
 const connect = function (chat_id, role_id) {
+
+
+	  
   let isNewChat = false;
   if (!chat_id) {
     isNewChat = true;
     chat_id = UUID();
   }
+  
+      console.log(chat_id + '=' + role_id)
+	  
   // 先关闭已有连接
   if (socket.value !== null) {
     activelyClose.value = true;
@@ -434,13 +442,16 @@ const connect = function (chat_id, role_id) {
   // 初始化 WebSocket 对象
   const _sessionId = getSessionId();
   let host = process.env.VUE_APP_WS_HOST
-  if (host === '') {
+  if (host === '' || !host) {
     if (location.protocol === 'https:') {
       host = 'wss://' + location.host;
     } else {
       host = 'ws://' + location.host;
     }
   }
+  
+  console.log(host + '<>' + chat_id + '=' + role_id)
+  
   const _socket = new WebSocket(host + `/api/chat/new?session_id=${_sessionId}&role_id=${role_id}&chat_id=${chat_id}&model=${model.value}`);
   _socket.addEventListener('open', () => {
     chatData.value = []; // 初始化聊天数据

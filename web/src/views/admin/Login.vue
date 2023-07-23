@@ -77,6 +77,8 @@ const login = function () {
     setLoginUser(res.data)
     router.push("/admin")
   }).catch((e) => {
+	console.log(e)
+	console.log('login error')
     ElMessage.error('登录失败，' + e.message)
   })
 }

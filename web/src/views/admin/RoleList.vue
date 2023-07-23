@@ -174,8 +174,9 @@ const rules = reactive({
 httpGet('/api/admin/role/list').then((res) => {
   tableData.value = res.data
   sortedTableData.value = copyObj(tableData.value)
-}).catch(() => {
-  ElMessage.error("获取聊天角色失败");
+}).catch((e) => {
+  ElMessage.error("获取聊天角色失败");  
+	console.log(e)
 })
 
 onMounted(() => {
